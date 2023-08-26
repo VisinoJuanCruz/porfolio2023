@@ -44,19 +44,19 @@ return(
     <div className="nes-container is-dark with-title skills-container " style={{marginBottom:"15px"}}>
       <h2 className="title up"><i className="nes-icon like "></i> Skills</h2>
           <ul>
-            {TECH.map((skill)  => {
+            {TECH.map((skill,index)  => {
               return(
-                <li className="item-tecnologia up">
+                <li className="item-tecnologia up" key={skill.tech}>
               <div className="tecnologia">
                 <p>{skill.tech}</p>
                 </div>
                 <div className="stars">
-                  <div>
+                  <div >
                     {Array(skill.stars).fill().map((star, index) => {
                       return <i className="nes-icon is-small star "></i>
                     })}
                   </div>
-                  <div>
+                  <div >
                     {Array(5 - skill.stars).fill().map((star, index) => {
                       return <i className="nes-icon is-empty is-small star "></i>
                     })}

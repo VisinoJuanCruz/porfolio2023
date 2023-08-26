@@ -1,6 +1,6 @@
-import quizzImage from "../images/quizzgame.jpg"
-import calculatorImage from "../images/calculator.jpeg"
-import tictactoeImage from "../images/tictactoe.jpeg"
+import quizzImage from "../../public/quizzgame.jpg"
+import calculatorImage from "../../public/calculator.jpeg"
+import tictactoeImage from "../../public/tictactoe.jpeg"
 import "./proyectos.css"
 
 export default function Proyectos(){
@@ -52,9 +52,9 @@ const PROYECTOS = [{
                         <div className="img-container">
                             <img className="img-fluid foto-proyecto" alt="foto-perfil" src={project.img}/>
                             <div className="overlay">
-                                {project.skills.map((skill) => {
+                                {project.skills.map((skill,id) => {
                                     return(
-                                        <span >{skill}</span>
+                                        <span>{skill}</span>
                                     )
                                     })
                                     }
